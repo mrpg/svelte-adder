@@ -39,7 +39,9 @@
             <span>=</span>
         </div>
         <div class="col-12 col-sm-auto">
-            <strong aria-live="polite" aria-label="Sum: {sum}">{sum}</strong>
+            <strong aria-live="polite" aria-label="Sum: {sum}">
+                {`${sum}`.replace("-", "\u2212")}
+            </strong>
         </div>
     </div>
 
