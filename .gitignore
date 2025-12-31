@@ -9,6 +9,7 @@ build
 node_modules
 .output
 /.svelte-kit
+THIRD-PARTY-LICENSES.txt
 Thumbs.db
 upload.sh
 .vercel
