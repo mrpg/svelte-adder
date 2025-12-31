@@ -8,18 +8,67 @@
     <title>Adder</title>
 </svelte:head>
 
-<div class="container mt-5">
+<main class="container mt-5 text-center text-sm-start">
     <h1>Adder</h1>
 
-    <div class="d-flex align-items-center gap-2 my-4">
-        <input type="number" class="form-control w-auto" bind:value={a} />
-        <span>+</span>
-        <input type="number" class="form-control w-auto" bind:value={b} />
-        <span>=</span>
-        <strong>{sum}</strong>
+    <div class="row g-2 align-items-center justify-content-center justify-content-sm-start my-4">
+        <div class="col-12 col-sm-auto">
+            <label for="input-a" class="visually-hidden">First number</label>
+            <input
+                id="input-a"
+                type="number"
+                inputmode="numeric"
+                class="form-control"
+                bind:value={a}
+            />
+        </div>
+        <div class="col-12 col-sm-auto" aria-hidden="true">
+            <span>+</span>
+        </div>
+        <div class="col-12 col-sm-auto">
+            <label for="input-b" class="visually-hidden">Second number</label>
+            <input
+                id="input-b"
+                type="number"
+                inputmode="numeric"
+                class="form-control"
+                bind:value={b}
+            />
+        </div>
+        <div class="col-12 col-sm-auto" aria-hidden="true">
+            <span>=</span>
+        </div>
+        <div class="col-12 col-sm-auto">
+            <strong aria-live="polite" aria-label="Sum: {sum}">{sum}</strong>
+        </div>
     </div>
 
     <p>
-        <a href="https://github.com/mrpg/svelte-adder" target="_blank" class="text-muted">GitHub</a>
+        <a
+            href="https://github.com/mrpg/svelte-adder"
+            target="_blank"
+            rel="noopener"
+            class="text-muted">GitHub</a
+        >
     </p>
-</div>
+</main>
+
+<style>
+    @media (max-width: 575.98px) {
+        input.form-control {
+            text-align: center;
+        }
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        appearance: none;
+        margin: 0;
+    }
+
+    input[type="number"] {
+        -moz-appearance: textfield;
+        appearance: textfield;
+    }
+</style>
