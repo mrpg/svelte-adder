@@ -1,7 +1,7 @@
 <script lang="ts">
-    let a = $state(0);
-    let b = $state(0);
-    let sum = $derived(a + b);
+    let a: number | null = $state(0);
+    let b: number | null = $state(0);
+    let sum = $derived((a ?? 0) + (b ?? 0));
 </script>
 
 <svelte:head>
@@ -20,6 +20,7 @@
                 inputmode="numeric"
                 class="form-control"
                 bind:value={a}
+                onfocus={() => a === 0 && (a = null)}
             />
         </div>
         <div class="col-12 col-sm-auto" aria-hidden="true">
@@ -33,6 +34,7 @@
                 inputmode="numeric"
                 class="form-control"
                 bind:value={b}
+                onfocus={() => b === 0 && (b = null)}
             />
         </div>
         <div class="col-12 col-sm-auto" aria-hidden="true">
