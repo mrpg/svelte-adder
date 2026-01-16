@@ -4,25 +4,8 @@ updates:
       directory: /
       schedule:
           interval: weekly
-      open-pull-requests-limit: 10
-      groups:
-          svelte:
-              patterns:
-                  - "svelte*"
-                  - "@sveltejs/*"
-          testing:
-              patterns:
-                  - "vitest"
-                  - "@playwright/*"
-                  - "@testing-library/*"
-          linting:
-              patterns:
-                  - "eslint*"
-                  - "prettier*"
-                  - "typescript-eslint"
 
     - package-ecosystem: github-actions
       directory: /
       schedule:
           interval: weekly
-      open-pull-requests-limit: 5
