@@ -30,7 +30,7 @@
         "prettier": "^3.8.0",
         "prettier-plugin-svelte": "^3.3.0",
         "rollup-plugin-license": "^3.6.0",
-        "svelte": "^5.48.5",
+        "svelte": "^5.51.3",
         "svelte-check": "^4.3.4",
         "svelte-eslint-parser": "^1.0.0",
         "typescript": "^5.9.3",
