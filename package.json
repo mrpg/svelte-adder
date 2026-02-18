@@ -27,7 +27,7 @@
         "eslint": "^9.18.0",
         "eslint-plugin-svelte": "^3.14.0",
         "globals": "^17.2.0",
-        "prettier": "^3.8.0",
+        "prettier": "^3.8.1",
         "prettier-plugin-svelte": "^3.3.0",
         "rollup-plugin-license": "^3.6.0",
         "svelte": "^5.48.5",
